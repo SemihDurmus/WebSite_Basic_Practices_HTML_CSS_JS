@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Homenaje&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:900&display=swap');
+
+*, ::before, ::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Fjalla One', 'Titillium Web', sans-serif;
+    font-size: 10px;
+    background-position: center;
+    background-blend-mode: multiply; 
+}
+body {
+  overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 1.3px;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 117rem; */
+    margin:0 ;
+    padding: 0 ;
+    background-color: rgba(83, 92, 104, 0.8);
+
+}
+
+.menu-icons{
+    color: #eee;
+    font-size: 4rem;
+    position: absolute;
+    top:50%;
+    right:2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1300;
+    display: none;
+}
+
+.logo {
+    margin: 0 3rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    border-bottom: 1px solid rgba(255,255,255, 0.5);
+}
+
+.nav-list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-list li {
+    line-height: 8rem;
+    position: relative;
+}
+
+.sub-menu li {
+    line-height: 4rem;
+}
+
+.nav-list a {
+    display: block;
+    color: #eee;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0 3.5rem;
+    transition: color 650ms ease-in-out;
+}
+
+.nav-list a:hover {
+    /* color: #f6b93b; */
+    color: yellow
+}
+.githubicon{
+    margin-right: 2rem ;
+}
+
+.sub-menu {
+    width: 23rem;
+    display:block;
+    position: absolute;
+    border-top: 2px solid yellow;
+    background-color: rgba(83, 92, 104, 0.8);
+    z-index:100;
+    top:10rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 650ms ease-in-out;
+}
+
+.sub-menu::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: 3rem;
+    border: solid 1.2rem transparent;
+    border-bottom-color: yellow;
+}
+
+.sub-menu .sub-menu::before {
+    top:0.9rem;
+    left:-2.5rem;
+    border: solid 1.2rem transparent;
+    border-right-color: yellow;
+}
+
+.sub-menu .sub-menu {
+    border-top: none;
+    border-left: 2px solid yellow;
+    top:0;
+    left:150%;
+}
+
+.nav-list li:hover > .sub-menu {
+    top:8rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li:hover > .sub-menu {
+    left:100%;
+    top:0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* @media screen and (max-width:800px) {
+    .nav-list {
+        position: fixed;
+        top:0;
+        left:0;
+        height:100vh;
+        display: none;
+        flex-direction: column;
+        align-items: initial;
+        background-color: rgba(83, 92, 104, 0.4);
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+
+    .nav-list > li {
+        line-height: 6rem;
+    }
+
+    .sub-menu {
+        position: initial;
+        border: 3px solid transparent;
+        border-left-color: yellow;
+        margin-left: 1rem;
+        max-height: 0;
+    }
+
+    .sub-menu::before {
+        display: none;
+    }
+
+    .nav-list li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+
+    .menu-icons{
+        display: block;
+    }
+
+    .ion-md-close{
+        display: none;
+    }
+
+    nav.active .ion-md-close {
+        display: block;
+    }
+
+    nav.active .ion-md-menu {
+        display: none;
+    }
+
+    nav.active .nav-list {
+        display:flex;
+    }
+
+} */
+
+/* --------END OF NAVIGATION MENU */
+
+/* BEGINNING OF MAIN PART OF THE FRONT PAGE */
+
+.watch {
+    position: absolute;
+    width:100%;
+    height:calc(100vh - 8rem);
+    top:8rem;
+    overflow:hidden;
+    z-index: -1;
+}
+
+.watch video {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.watch h1 {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    text-transform: uppercase;
+    font-size:25rem;
+    text-align: center;
+    line-height: calc(100vh - 8rem);
+    font-family: 'Poppins' , 'sans-serif';
+    mix-blend-mode: screen;
+}
+
+/* END OF MAIN PART OF THE FRONT PAGE */
+
